@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^index$ index.html [NC,L]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /doe/index\.html\ HTTP/
+RewriteRule ^index\.html$ /doe/index [R=301,L]
